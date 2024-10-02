@@ -1,0 +1,47 @@
+<div class="flex items-center justify-center h-[80vh] bg-gray-100">
+  <div class="bg-white shadow-md rounded-lg p-8 w-96">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
+
+    <!-- Area to display messages -->
+    <div *ngIf="message"
+         [ngClass]="{'text-green-600': success, 'text-red-600': !success}"
+         class="mb-4 text-center">
+      {{ message }} <!-- Displays the message based on login success or failure -->
+    </div>
+
+    <form (ngSubmit)="login()"> <!-- Calls the login method on form submission -->
+      <div class="mb-4">
+        <label for="username" class="block text-gray-700">User</label>
+        <input type="text"
+               id="username"
+               [(ngModel)]="email"
+               name="username"
+               required
+               class="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
+               placeholder="Enter your username">
+      </div>
+
+      <div class="mb-4">
+        <label for="password" class="block text-gray-700">Password</label>
+        <input type="password"
+               id="password"
+               [(ngModel)]="password"
+               name="password"
+               required
+               class="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-200"
+               placeholder="Enter your password">
+      </div>
+
+      <button type="submit"
+              class="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-500 transition duration-200">
+        Sign in <!-- Button to submit the form -->
+      </button>
+    </form>
+
+    <p class="mt-4 text-center text-gray-600">
+      Don't have an account?
+      <a routerLink="/register"
+         class="text-blue-600 hover:underline">Register</a> <!-- Link to register page -->
+    </p>
+  </div>
+</div>
