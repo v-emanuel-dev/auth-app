@@ -8,7 +8,7 @@ A full-stack application that features user authentication and authorization. Bu
 
 - User registration and login
 - Secure user authentication with JWT
-- User dashboard for viewing notes
+- User dashboard
 - Responsive design using Tailwind CSS
 - User-friendly interface with easy navigation
 
