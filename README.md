@@ -1,3 +1,5 @@
+![Auth App Screenshot](https://github.com/v-emanuel-dev/auth-app/blob/main/frontend/src/assets/img/auth-screenshot.png)
+
 # Auth App
 
 A full-stack application that features user authentication and authorization. Built using Angular for the frontend, Node.js with JWT for the backend, and MySQL as the database.
